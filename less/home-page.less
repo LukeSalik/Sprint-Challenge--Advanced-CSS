@@ -3,9 +3,17 @@
 .home {
 
   .intro {
-
+    /*phone*/
+    @media(max-width: 500px){
+      .phone();
+      padding: 5px;
+      
+    }
     h2 {
       padding: 15px;
+      @media(max-width: 500px) {
+          padding-right: 325px;
+      }
     }
 
     p {
@@ -18,7 +26,18 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-
+    /*phone*/
+    @media (max-width: 500px) {
+      .sky {
+        display: none;
+      }
+      .launch {
+        display: none;
+      }
+      .blast {
+        width: 100%;
+      }
+    }
     img {
       width: 28%;
       margin: 20px 2.5%;
@@ -36,6 +55,7 @@
 
     p {
       margin-top: 13px;
+      
     }
   }
 
@@ -57,10 +77,15 @@
         margin-bottom: 26px;
       }
 
-      .btn {
+      button {
+        .button-layout(10px 25px, white);
+        /*phone*/
+        @media(max-width: 500px) {
+          width: 100%;
+          
+        }
       }
-    }
-
+  }
     .walk-img {
       width: 46%;
       margin-left: 4%;
@@ -73,3 +98,12 @@
     }
   }
 }// home
+
+.header-img {
+  border-radius: 10px;
+  @media(max-width: 500px) {
+    width: 100%;
+    
+  }
+}
+
